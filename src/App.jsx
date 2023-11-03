@@ -3,7 +3,9 @@ import { Route, Routes, Link } from 'react-router-dom';
 import { appsData, productsData } from './data.js';
 import Home from './pages/Home';
 import ProductsPage from './pages/Products';
+import AppsPage from './pages/AppsPage/index.jsx'
 import './App.css';
+//import AppsPage from './pages/Apps';
 
 export default function App() {
   const [products, setProducts] = useState(productsData);
@@ -23,6 +25,11 @@ export default function App() {
             <li>
               <Link to="/products">Products</Link>
             </li>
+           <li>
+           <Link to="/apps">App</Link>
+           </li>
+             
+           
           </ul>
         </nav>
       </header>
@@ -33,6 +40,9 @@ export default function App() {
         />
         <Route path="/" element={<Home />} />
       </Routes>
+      <Routes>
+       <Route  path='/apps'  element={<AppsPage/>}/>
+      </Routes> 
     </div>
   );
 }
