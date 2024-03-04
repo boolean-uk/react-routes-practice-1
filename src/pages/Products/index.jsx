@@ -17,7 +17,7 @@ function ProductsPage(props) {
         })}
       </ul>
     </main>
-  );
+  )
 }
 
 export default ProductsPage;
